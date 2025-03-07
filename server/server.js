@@ -14,7 +14,7 @@ app.use(cors(
     }
 ))
 
-mongoose.connect('mongodb+srv://admin:<db_password>@cluster0.56fju.mongodb.net/registerList?retryWrites=true&w=majority&appName=Cluster0',{
+mongoose.connect('mongodb+srv://admin:admin12345@cluster0.56fju.mongodb.net/registerList?retryWrites=true&w=majority&appName=Cluster0',{
     useNewUrlParser: true, 
     useUnifiedTopology: true 
 })
