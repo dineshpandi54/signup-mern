@@ -1,11 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const registerModel = require('./models/User')
 
 const app =express();
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors(
     {
         origin:["https://signup-mern-signup.vercel.app"],
@@ -14,10 +13,7 @@ app.use(cors(
     }
 ))
 
-mongoose.connect('mongodb+srv://admin:admin12345@cluster0.56fju.mongodb.net/registerList?retryWrites=true&w=majority&appName=Cluster0',{
-    useNewUrlParser: true, 
-    useUnifiedTopology: true 
-})
+mongoose.connect('mongodb+srv://admin:admin12345@cluster0.56fju.mongodb.net/registerList?retryWrites=true&w=majority&appName=Cluster0')
 
 app.post('/register',(req,res) => {
     registerModel.create(req.body)
