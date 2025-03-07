@@ -6,9 +6,15 @@ const registerModel = require('./models/User')
 
 const app =express();
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors(
+    {
+        origin:[""],
+        methods:["POST"],
+        credentials:[true]
+    }
+))
 
-mongoose.connect('mongodb://localhost:27017/registerList',{
+mongoose.connect('mongodb+srv://admin:<db_password>@cluster0.56fju.mongodb.net/registerList?retryWrites=true&w=majority&appName=Cluster0',{
     useNewUrlParser: true, 
     useUnifiedTopology: true 
 })
