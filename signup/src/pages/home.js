@@ -16,7 +16,7 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:5000/home", {
+      .post("https://signup-mern-server-q.vercel.app/home", {
         hobby,
         language,
         occupation,
