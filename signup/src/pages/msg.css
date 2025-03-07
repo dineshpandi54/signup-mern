@@ -17,3 +17,9 @@
     box-shadow: 1px 1px 15px black;
     text-align: center;
 }
+
+@media screen and (max-width:500px){
+    .login-page{
+        width: 90%;
+    }
+}
