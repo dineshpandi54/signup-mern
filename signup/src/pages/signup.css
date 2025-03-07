@@ -55,3 +55,9 @@
     display: flex;
     gap: 5px;
 }
+
+@media screen and (max-width:500px){
+    .signup-page{
+        width: 90%;
+    }
+}
