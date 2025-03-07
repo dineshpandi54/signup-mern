@@ -8,7 +8,7 @@ const app =express();
 app.use(bodyParser.json());
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://signup-mern-signup.vercel.app/"],
         methods:["POST"],
         credentials:[true]
     }
