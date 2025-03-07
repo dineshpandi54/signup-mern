@@ -63,3 +63,9 @@
 .logout-link:hover{
     color: black;
 }
+
+@media screen and (max-width:500px){
+    .home-page{
+        width: 90%;
+    }
+}
