@@ -8,12 +8,16 @@ app.use(express.json());
 app.use(cors(
     {
         origin:["https://signup-mern-signup.vercel.app"],
-        methods:["POST"],
+        methods:["POST","GET"],
         credentials:[true]
     }
 ))
 
 mongoose.connect('mongodb+srv://admin:admin12345@cluster0.56fju.mongodb.net/registerList?retryWrites=true&w=majority&appName=Cluster0')
+
+app.get("/",(req,res)=>{
+    res.json("hello");
+})
 
 app.post('/register',(req,res) => {
     registerModel.create(req.body)
